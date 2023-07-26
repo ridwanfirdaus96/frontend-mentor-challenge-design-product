@@ -39,9 +39,14 @@ body {
     background-color: white;
 }
 
-.cart-image img {
+.image_full {
     width: 120%;
     height: 100%;
+    display: block;
+}
+
+.image_mobile {
+    display: none;
 }
 
 .cart-title {
@@ -110,5 +115,38 @@ body {
     border-radius: 14px;
     outline: none;
     border: none;
+    
+}
+.cart-button:hover {
+    background-color: hsl(157, 32%, 21%);;
     cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    .cart {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 35px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .image_full {
+        display: none;
+    }
+
+    .image_mobile {
+        width: 100%;
+        height: 216px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
+
+    .cart-title {  
+        margin-top: -50px;
+    }
 }
